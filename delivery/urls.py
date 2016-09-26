@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+#app
+from cliente.views import registro, loguin, logout
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^salir',logout),
+    url(r'^register$',registro,name="registro"),
+    url(r'^sesion$',loguin,name="loguin"),
 ]
+
+
