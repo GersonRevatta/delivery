@@ -16,14 +16,15 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 #app
-from cliente.views import registro, loguin, logout
+from cliente.views import registro, loguin, logout, index
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^salir',logout),
+    url(r'^salir$',logout),
     url(r'^register$',registro,name="registro"),
     url(r'^sesion$',loguin,name="loguin"),
+    url(r'^index$',index,name="index"),
 ]
 
 

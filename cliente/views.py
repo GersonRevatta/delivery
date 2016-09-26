@@ -74,3 +74,17 @@ def logout(request):
 	return HttpResponse('Saliendo de session ')
 
 
+
+
+def index(request):
+	frm = FormularioRegistro()
+
+	args = {}
+	args.update(csrf(request))
+
+	args['frm'] = frm
+	
+	return render (request,'index.html',args)
+
+	
+

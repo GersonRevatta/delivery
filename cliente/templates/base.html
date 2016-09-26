@@ -22,11 +22,22 @@
             <div class="inner">
               <h3 class="masthead-brand">Deliver Pizza</h3>
               <nav>
-                <ul class="nav masthead-nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Register</a></li>
-                  <li><a href="#">Loguin</a></li>
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="active"><a class="btn" onclick="window.location.href='/index'">Home</a></li>
+                  <li><a  href="#">Features</a></li>
+                   {% if request.session.userr %}
+                   <li >
+                      <a  class="btn" onclick="window.location.href='/salir'" href="">Cerrar Sesion</a>
+                     
+                  </li>
+                   {% else %}
+                   <li >
+                      <a class="btn" onclick="window.location.href='/sesion'" >Loguin</a>
+                   </li>
+                   <li>
+                    <a class="btn" onclick="window.location.href='/register'" > Registrarse</a>
+                   </li>
+                   {% endif%}
 
                 </ul>
               </nav>
@@ -34,7 +45,7 @@
           </div>
 
 
-        {% block content %}{% endblock %}
+    {% block content %}{% endblock %}
 		{% block registro %} {% endblock %}
 		{% block loguin %} {% endblock %}
 
