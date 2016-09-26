@@ -49,7 +49,7 @@ def loguin(request):
 				
 
 				#return HttpResponseRedirect(reverse('create'))
-				return HttpResponseRedirect(reverse('loguin'))
+				return HttpResponseRedirect(reverse('index'))
 
 			else:	
 				
