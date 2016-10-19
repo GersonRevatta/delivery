@@ -24,7 +24,7 @@ urlpatterns = [
     url(r'^salir$',logout),
     url(r'^register$',registro,name="registro"),
     url(r'^sesion$',loguin,name="loguin"),
-    url(r'^index$',index,name="index"),
+    url(r'^$',index,name="index"),
 ]
 
 
