@@ -1,7 +1,7 @@
 from django.db import models
 import hashlib
 
-class cliente (models.Model):
+class Cliente (models.Model):
     username = models.CharField(max_length=30)
     password = models.CharField(max_length=64)
     email =  models.EmailField()

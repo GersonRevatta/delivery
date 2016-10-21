@@ -12,11 +12,28 @@ class Venta (models.Model):
 	igv=models.DecimalField(max_digits = 6, decimal_places = 2)
 	fecha  = models.DateTimeField(auto_now_add=True)
 	finalizada=models.BooleanField()
-	detalle=models.ForeignKey('Detalle',null=True,blank=True)
-	def Total	():
+	detalle=models.ForeignKey('DetalleProducto',null=True,blank=True)
+	def finalizar(self):
+		'''termina la venta y imprime la boleta '''
 		...
-		
-class Detalle (models.Model):
+	def añadirProducto(self,cantidad,producto):
+		''' agrega producto a la boleta '''
+		...
+	def eliminarProducto(self,producto):
+		''' eliminar producto  agregada a boleta  por equivocacion '''
+		...
+	def modificarProducto(self,cantidad,producto):
+		''' modifica producto agragada a boleta por quivocacion '''
+		...		 	
+	def eliminar(self):
+		''' elimina una venta finalizada  '''
+		...
+	def cancelar(self):
+		''' cancela una boleta antes de finalizar la venta '''
+		...	 	
+
+
+class DetalleProducto (models.Model):
 	producto=models.ForeignKey(Producto,null=True,blank=True)
 	cantidad=models.IntegerField()
 	precio=models.DecimalField(max_digits = 6, decimal_places = 2)

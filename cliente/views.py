@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import cliente
+from .models import Cliente
 from .form import FormularioRegistro
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse

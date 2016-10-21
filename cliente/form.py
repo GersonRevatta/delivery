@@ -1,11 +1,11 @@
 
 from django import forms
-from .models import  cliente
+from .models import  Cliente
 
 
 class FormularioRegistro(forms.ModelForm):
 	class Meta:
-		model = cliente
+		model = Cliente
 		fields = ['username','password','email','first_name','last_name','dni']    
 
 
